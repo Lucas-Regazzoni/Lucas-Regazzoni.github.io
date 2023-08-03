@@ -1,12 +1,5 @@
-/*!
-* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
 
+// Scripts
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -52,8 +45,51 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
+    let gallery = new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
 
+    
+    //let gallery = document.querySelector('#portfolio a.portfolio-box').simpleLightbox();
+
+
+    /*gallery.on('show.simplelightbox', function () {
+        console.log("muestro galeria")
+    });
+
+    gallery.on('close.simplelightbox', function () {
+        console.log("cierro galeria")
+    });*/
+    
+    new SimpleLightbox({
+        elements: '#portfolio1 a.portfolio-box'
+    });
+    
+    new SimpleLightbox({
+        elements: '#portfolio2 a.portfolio-box'
+    });
+    
+    
+
+    //modal
+
+    const openmodal = document.getElementById("openmodal");
+    const modalcontainer = document.getElementById("modal_container");
+    const close = document.getElementById("close");
+
+    openmodal.addEventListener("click",() => {
+        modalcontainer.style.display = 'block';
+        console.log("lo quise abrir")
+    });
+
+    close.addEventListener("click",() => {
+        modalcontainer.style.display = 'none';
+        console.log("lo quise cerrar")
+    });
+
 });
+
+
+
+
+    
